@@ -1,0 +1,29 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: user-server
+          predicates:
+            - Path=/user-server/**
+          uri: http://localhost:8001
+        - id: feed-server
+          predicates:
+            - Path=/feed-server/**
+          uri: http://localhost:8002
+        - id: auth-server
+          predicates:
+            - Path=/auth-server/**
+          uri: http://localhost:8003
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
