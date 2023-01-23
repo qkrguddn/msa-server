@@ -19,6 +19,14 @@ spring:
           predicates:
             - Path=/auth-server/**
           uri: http://localhost:8003
+        - id: follow-server
+          predicates:
+            - Path=/follow-server/**
+          uri: http://localhost:8004
+        - id: alarm-server
+          predicates:
+            - Path=/alarm-server/**
+          uri: http://localhost:8005
 
 eureka:
   client:
