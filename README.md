@@ -1,5 +1,5 @@
 
-## spring cloud gateway를 통한 msa 개발
+## spring cloud gateway를 통한 msa 환경 
 
 * 기술
   * gateway: spring cloud gateway
